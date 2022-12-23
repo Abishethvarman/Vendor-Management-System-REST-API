@@ -10,12 +10,24 @@ public class CloudVendorAPIService {
     @GetMapping("{vendorId}")
     public CloudVendor getCloudVendorDetails(String vendorId){
         return  cloudVendor;
-//                ("C1","name1","ph1", "re");
+//       return new CloudVendor("C1","name1","ph1", "re");
     }
 
     @PostMapping
     public String createCloudVendorDetails(@RequestBody CloudVendor cloudVendor){
         this.cloudVendor = cloudVendor;
         return "Cloud Vendor successfully created";
+    }
+
+    @PutMapping
+    public String updateCloudVendorDetails(@RequestBody CloudVendor cloudVendor){
+        this.cloudVendor = cloudVendor;
+        return "Cloud Vendor updated successfully.";
+    }
+
+    @DeleteMapping("{vendorId}")
+    public String deleteCloudVendorDetailsByID(String vendorId) {
+        this.cloudVendor = null;
+        return "Cloud Vendor deleted successfully.";
     }
 }
