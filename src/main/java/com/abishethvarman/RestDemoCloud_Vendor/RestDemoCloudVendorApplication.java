@@ -9,6 +9,6 @@ public class RestDemoCloudVendorApplication {
 	//This is the main function and it will through a whitelabel error on port8080
 	public static void main(String[] args) {
 		SpringApplication.run(RestDemoCloudVendorApplication.class, args);
-		System.out.println("The Spring boot application is working....");
+		System.out.println("The Spring boot application is working.....");
 	}
 }
