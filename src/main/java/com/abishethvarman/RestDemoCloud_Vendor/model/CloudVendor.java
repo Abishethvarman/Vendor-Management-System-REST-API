@@ -1,7 +1,16 @@
 package com.abishethvarman.RestDemoCloud_Vendor.model;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 //the data model for the cloud vendor service
+@Entity
+@Table(name="cloud_vendor_info")
 public class CloudVendor {
+    @Id
     private String vendorId;
     private String vendorName;
     private String vendorPhone;
