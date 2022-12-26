@@ -17,7 +17,7 @@ public class CloudVendorController {
 
     //Read specific cloud vendor
     @GetMapping("{vendorId}")
-    public CloudVendor getCloudVendorDetails(@PathVariable("VendorId") String vendorId){
+    public CloudVendor getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
         return  cloudVendorService.getCloudVendor(vendorId);
     }
 
@@ -45,3 +45,4 @@ public class CloudVendorController {
         return "Cloud Vendor deleted successfully.";
     }
 }
+
